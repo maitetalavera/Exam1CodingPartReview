@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1.
+# DONE: 1.
 #
 #   In this module, we are going to create a script that helps you calculate
 #   your score in this course.
@@ -24,8 +24,11 @@
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+def gather_score(category_name):
+    return float(input(f"What is your current grade in the {category_name} category"))
+
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #
 #   Now we need a function that will calculate the user's grade in the course.
 #
@@ -61,8 +64,11 @@
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+def calculate_final_grade(participation, exam1, exam2, exam3, final_project):
+    return (participation * 0.20) + (exam1 * 0.1)+(exam2 * 0.15) + (exam3 * 0.2) + (final_project * 0.35)
+
 ###############################################################################
-# TODO: 3.
+# DONE: 3.
 #
 #   Now, let's put it all together.
 #
@@ -84,3 +90,16 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+
+def main():
+    print("Let's calculate your grade in CSC 141!")
+    participation1 = float(input("Please enter your current grade in the Participation category"))
+    exam11 = float(input("Please enter your current grade in the Exam 1 category"))
+    exam21 = float(input("Please enter your current grade in the Exam 2 category"))
+    exam31 = float(input("Please enter your current grade in the Exam 3 category"))
+    final_project1 = float(input("Please enter your current grade in the Final Project category"))
+    final_grade=calculate_final_grade(final_project=final_project1, exam2=exam21, exam1=exam11, exam3=exam31, participation=participation1)
+    final_grade_percentage= final_grade *100
+    print(f"You currently have {final_grade_percentage}% in CSC 141.")
+    
+main()
