@@ -26,7 +26,7 @@ def date_from_now(num_of_days):
     return end_date.strftime('%B %d, %Y')
 
 ###############################################################################
-# TODO: 1.
+# DONE: 1.
 #
 #   Write a function called book_info() that takes four keyword arguments:
 #     - title
@@ -43,8 +43,18 @@ def date_from_now(num_of_days):
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+def book_info(title, author, genre, num_of_pages):
+    print(f"Title: {title}")
+    print(f"Author: {author}")
+    print(f"Genre: {genre}")
+    print(f"Number of Pages: {num_of_pages}")
+#or
+    #print(f"Title: {title}\nAuthor: {author}\nGenre: {genre}\nNumber of Pages: {num_of_pages}")
+
+
+
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #
 #   Write a function called reading_plan() that takes two parameters
 #     - num_of_pages
@@ -63,8 +73,13 @@ def date_from_now(num_of_days):
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+def reading_plan(num_of_pages, num_of_days):
+    end_date = date_from_now(num_of_days)
+    pages_per_day = num_of_pages / num_of_days
+    return f"To read this book in {num_of_days} days starting tomorrow, you will have to read {pages_per_day} per day. You will finish the book on {end_date}. Happy reading!"
+
 ###############################################################################
-# TODO: 3.
+# DONE: 3.
 #
 #   Now write a function called main() that will start everything off.
 #
@@ -85,3 +100,15 @@ def date_from_now(num_of_days):
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+
+def main():
+    title1 = "The Hobbit"
+    author1 = "J.R.R Tolkien"
+    genre1 = "Fantasy/Adventure"
+    num_of_pages1 = 300
+    num_of_days = 5
+
+    book_info(title=title1, author=author1, genre=genre1, num_of_pages=num_of_pages1)
+    print(reading_plan(num_of_pages1, num_of_days))
+
+main() 
