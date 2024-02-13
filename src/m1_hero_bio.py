@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1.
+# DONE: 1.
 #
 #   In this module, we are going to create a script that will be a system where
 #   superheroes will input their information and it will create a short bio
@@ -20,8 +20,13 @@
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
  
+def name():
+    super_name = input('What is your superhero name? ')
+    return super_name
+
+
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #
 #   Now, lets create another function called powers() that is very similar, but
 #   this time it will prompt the superhero to enter their superhero powers. It
@@ -35,8 +40,11 @@
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+def powers(): 
+    return input('Please list your superhero powers: ')
+
 ###############################################################################
-# TODO: 3.
+# DONE: 3.
 #
 #   And, create one more function called sidekick() that asks the superhero
 #   what their sidekick's name is like so:
@@ -49,8 +57,11 @@
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+def sidekick():
+    return input('Who is your sidekick? ')
+
 ###############################################################################
-# TODO: 4.
+# DONE: 4.
 #
 #   Now that we have all the pieces together, we need to put them all together.
 #
@@ -74,3 +85,15 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+
+def main():
+    print('Hello Hero')
+    user_name= name()
+    print(f'Hello {user_name}!')
+    powers_list = powers()
+    print ('Whast great powers!')
+    sidekick_name = sidekick()
+    print (f'Ah, {sidekick_name}! What a great partner!')
+    print (f"Each superhero has amazing powers! {user_name} has the powers of {powers_list}. With his sidekick, {sidekick_name}, by his/her side, those bad guys don't stand a chance")
+
+main()
